@@ -68,8 +68,8 @@ public class register extends HttpServlet {
             out.println("<p align=center>We hope you enjoy your stay and our technology</p>");
             out.println("</body></html>");
 
-            sqlStr = "INSERT INTO users (fname, email, pass, room)values ("
-                    + "'" + fullName + "', '" + email + "', '" + pass + "', '" + roomNum + "')";
+            sqlStr = "INSERT INTO users (fname, email, pass, room, active)values ("
+                    + "'" + fullName + "', '" + email + "', '" + pass + "', '" + roomNum + "', '" + "no"+"')";
             System.out.println(sqlStr);  // for debugging
             stmt.executeUpdate(sqlStr);
 
